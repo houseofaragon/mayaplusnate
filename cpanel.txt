@@ -1,0 +1,6 @@
+cpanel
+	username: mayaplusnate8
+	password: Milkroses8
+
+Website(s) IP Address
+	23.229.171.195
