@@ -148,6 +148,10 @@ a:focus {
     font-size: 18px;
 }
 
+#about{
+    background: url(../img/forest1.jpg) no-repeat bottom center scroll;
+
+}
 @media(min-width:767px) {
     .intro {
         height: 100%;
