@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
+    margin: 100px 0 20px 0;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
@@ -26,8 +26,10 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.5;
+    font-weight: 100;
+    color:#ddd;
 }
 
 @media(min-width:767px) {
@@ -36,6 +38,10 @@ p {
         font-size: 20px;
         line-height: 1.6;
     }
+}
+
+hr{
+    width: 50px;
 }
 
 a {
@@ -53,6 +59,11 @@ a:focus {
 
 .light {
     font-weight: 400;
+}
+
+.large-text{
+    font-size: 30px;
+    line-height: 35px;
 }
 
 .navbar {
@@ -149,7 +160,19 @@ a:focus {
 }
 
 #about{
-    background: url(../img/forest1.jpg) no-repeat bottom center scroll;
+    background: url(../img/projection_house.jpg) no-repeat center scroll;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+#about:hover{
+    cursor: pointer;
+}
+#camping{
+    background: url(../img/snow_hill.jpg) no-repeat center scroll;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
 }
 @media(min-width:767px) {

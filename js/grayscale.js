@@ -1,11 +1,5 @@
 //jQuery to collapse the navbar on scroll
-$(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-});
+
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -18,120 +12,30 @@ $(function() {
     });
 });
 
-//Google Map Skin - Get more at http://snazzymaps.com/
-var myOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(53.385873, -1.471471),
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    disableDefaultUI: true,
-    styles: [{
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 17
-        }]
-    }, {
-        "featureType": "landscape",
-        "elementType": "geometry",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 20
-        }]
-    }, {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 17
-        }]
-    }, {
-        "featureType": "road.highway",
-        "elementType": "geometry.stroke",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 29
-        }, {
-            "weight": 0.2
-        }]
-    }, {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 18
-        }]
-    }, {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 16
-        }]
-    }, {
-        "featureType": "poi",
-        "elementType": "geometry",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 21
-        }]
-    }, {
-        "elementType": "labels.text.stroke",
-        "stylers": [{
-            "visibility": "on"
-        }, {
-            "color": "#000000"
-        }, {
-            "lightness": 16
-        }]
-    }, {
-        "elementType": "labels.text.fill",
-        "stylers": [{
-            "saturation": 36
-        }, {
-            "color": "#000000"
-        }, {
-            "lightness": 40
-        }]
-    }, {
-        "elementType": "labels.icon",
-        "stylers": [{
-            "visibility": "off"
-        }]
-    }, {
-        "featureType": "transit",
-        "elementType": "geometry",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 19
-        }]
-    }, {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 20
-        }]
-    }, {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
-        "stylers": [{
-            "color": "#000000"
-        }, {
-            "lightness": 17
-        }, {
-            "weight": 1.2
-        }]
-    }]
-};
+var random;
+var backgrounds = [
+    'url(img/forest1.jpg) no-repeat center scroll',
+    'url(img/beachlands.jpg) no-repeat center scroll',
+    'url(img/black_beach.jpg) no-repeat center scroll',
+    'url(img/broad_channel.jpg) no-repeat center scroll',
+    'url(img/complex.jpg) no-repeat center scroll',
+    'url(img/lights.jpg) no-repeat center scroll',
+    'url(img/marsh_owls.jpg) no-repeat center scroll',
+    'url(img/beachlands.jpg) no-repeat center scroll',
+    'url(img/meadows.jpg) no-repeat center scroll',
+    'url(img/sea_trees.jpg) no-repeat center scroll',
+    'url(img/projection_house.jpg) no-repeat center scroll',
+    'url(img/snow_hill.jpg) no-repeat center scroll',
+    'url(img/projection_house.jpg) no-repeat center scroll'
 
-var map = new google.maps.Map(document.getElementById('map'), myOptions);
+];
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+$('#about').on('click', function(){
+    random = randomInt(0,13);
+    $('#about .row').hide();
+    $('#about').css('background',backgrounds[random]);
+});
