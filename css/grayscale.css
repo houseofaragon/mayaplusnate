@@ -44,6 +44,11 @@ hr{
     width: 50px;
 }
 
+img{
+    max-width: 1024px;
+    height: auto;
+}
+
 a {
     color: #28c3ab;
     -webkit-transition: all .2s ease-in-out;
@@ -138,7 +143,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/meadows.jpg) no-repeat bottom center scroll;
+    background: url(../img/meadows.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -159,26 +164,30 @@ a:focus {
     font-size: 18px;
 }
 
-#about{
-    background: url(../img/projection_house.jpg) no-repeat center scroll;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+#about {
+    background: url(../img/projection_house.jpg) no-repeat center center scroll;
 
 }
 
-#about:hover{
-    cursor: pointer;
+#about:hover {
+   cursor: url(../img/cursor.png), default;
+
 }
+
 #camping{
-    background: url(../img/snow_hill.jpg) no-repeat center scroll;
+    background: url(../img/snow_hill.jpg) no-repeat top left ;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
 }
 @media(min-width:767px) {
-    .intro {
+    .intro, #about {
         height: 100%;
         padding: 0;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
     }
 
     .brand-heading {
@@ -310,6 +319,11 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
+.btn:hover{
+    background-color: #e16160;
+    color: #fff;
+}
+
 .btn-default {
     border: 1px solid #28c3ab;
     color: #28c3ab;
@@ -332,6 +346,8 @@ a:focus {
 .banner-social-buttons {
     margin-top: 0;
 }
+
+
 
 @media(max-width:1199px) {
     ul.banner-social-buttons {
