@@ -165,21 +165,19 @@ a:focus {
 }
 
 #about {
-    background: url(../img/projection_house.jpg) no-repeat center center scroll;
-
+    background: url(../img/projection.jpg) no-repeat center center scroll;
 }
 
 #about:hover {
    cursor: url(../img/cursor.png), default;
-
 }
 
-#camping{
-    background: url(../img/snow_hill.jpg) no-repeat top left ;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
+#about h1{
+    vertical-align: center;
+    margin-top: 20%;
 }
+
+
 @media(min-width:767px) {
     .intro, #about {
         height: 100%;
